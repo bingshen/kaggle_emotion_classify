@@ -1,1 +1,11 @@
-# kaggle_emotion_classify
+kaggle上的那道电影评论情感分析题，之前写过一篇解决方案。效果还很好。这里用LSTM+attention的方式在做一遍。主要是练手
+
+题目链接：https://www.kaggle.com/c/word2vec-nlp-tutorial/data
+
+先说效果。采用LSTM直接把各个时刻的输出求平均然后过全连接层分类。最后得分大概0.92+
+
+采用LSTM+attention的话使用相同的网络规格和迭代次数，可以得到0.94+
+
+也就是说，rnn对于文本分类的任务，实际上效果并不如之前实验的word2vec的方法好（之前的成绩可以达到0.97+）所以只是起一个练手的目的
+
+网络的规格是：4层LSTM网络，每一层神经元200个。双向
